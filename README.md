@@ -1,5 +1,5 @@
 [Host]
-1. Create a new database 'l1jdb' and import data
+1. Create a new database 'l1jdb' and import data, existing tables and database 'l1jdb' will be dropped
 > mysql -u root -p < db/l1jdb.sql
 
 2. Build dockerfile
