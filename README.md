@@ -11,7 +11,7 @@ Guest: docker with L1JTW7.6C server running
 Note: /etc/mysql/mysql.conf.d/mysqld.cnf to #bind-address for allow docker container to access host mysql
 
 2. Build dockerfile
-> ./build_server.sh <db_host> <db_account> <db_password>
+> ./build_server.sh <db_account> <db_password>
 
 3. Start the docker image as Lineage 7.6c game server.
 > ./start_docker.sh
