@@ -1,0 +1,32 @@
+version: '2'
+services:
+  app:
+    image: l1j-tw-7.6-server
+    tty: true
+    build: 
+        context: ./l1j-tw-7.6-server/
+        args: 
+          - L1JDB_HOST=db
+          - L1JDB_ACCOUNT=${account}
+          - L1JDB_PASSWORD=${password}
+    environment:
+        L1JDB_HOST: db
+        L1JDB_ACCOUNT: ${account}
+        L1JDB_PASSWORD: ${password}
+    depends_on:
+     - db
+    ports:
+     - "2000:2000"
+ 
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: l1jdb
+      MYSQL_USER: ${account}
+      MYSQL_PASSWORD: ${password}
+    volumes:
+      - ./mysql-data/db:/var/lib/mysql
+                    
+ 

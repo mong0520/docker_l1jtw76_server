@@ -12,9 +12,11 @@ RUN apt-get update
 RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y vim
 RUN apt-get install -y telnet
+RUN apt-get install -y mysql-client
 
 ADD L1J-TW_7.6.tar.gz /opt/l1jtw/
 ADD config/* /opt/l1jtw/L1J-TW_7.6/config/
+ADD scripts/* /opt/l1jtw/L1J-TW_7.6/scripts/
 
 # Setup JAVA_HOME, this is useful for docker commandline
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
