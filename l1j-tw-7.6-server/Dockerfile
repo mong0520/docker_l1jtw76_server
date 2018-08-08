@@ -1,6 +1,6 @@
 # ubuntu-openjdk-8-jdk
 #
-# VERSION               0.0.3
+# VERSION               0.0.4
 #
 # Extends ubuntu-base with java 8 openjdk jdk installation
 #
@@ -26,7 +26,8 @@ ARG L1JDB_HOST
 ARG L1JDB_ACCOUNT
 ARG L1JDB_PASSWORD
 
-RUN sed -i s/L1JDB_HOST/${L1JDB_HOST}/ /opt/l1jtw/L1J-TW_7.6/config/server.properties 
-RUN sed -i s/L1JDB_ACCOUNT/${L1JDB_ACCOUNT}/ /opt/l1jtw/L1J-TW_7.6/config/server.properties 
-RUN sed -i s/L1JDB_PASSWORD/${L1JDB_PASSWORD}/ /opt/l1jtw/L1J-TW_7.6/config/server.properties 
-CMD ["/bin/bash"]
+# RUN sed -i s/L1JDB_HOST/${L1JDB_HOST}/ /opt/l1jtw/L1J-TW_7.6/config/server.properties
+# RUN sed -i s/L1JDB_ACCOUNT/${L1JDB_ACCOUNT}/ /opt/l1jtw/L1J-TW_7.6/config/server.properties
+# RUN sed -i s/L1JDB_PASSWORD/${L1JDB_PASSWORD}/ /opt/l1jtw/L1J-TW_7.6/config/server.properties
+# CMD ["/bin/bash"]
+ENTRYPOINT ["/opt/l1jtw/L1J-TW_7.6", "server_start.sh"]
