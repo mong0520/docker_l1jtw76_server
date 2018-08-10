@@ -9,4 +9,4 @@ run:
 	docker run -d --rm -p 2000:2000 -it l1jtw
 
 run_debug:
-	docker run --rm -p 2000:2000 -it l1jtw /bin/bash
+	docker run --rm -v $(PWD):/mnt -p 2000:2000 -it l1jtw /bin/bash
