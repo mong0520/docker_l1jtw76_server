@@ -6,7 +6,7 @@ build:
 	docker build -t l1jtw --build-arg L1JDB_HOST=$(DB_HOST) --build-arg L1JDB_ACCOUNT=$(DB_ACCOUNT) --build-arg L1JDB_PASSWORD=$(DB_PASSWORD) .
 
 run:
-	docker run --rm -p 2000:2000 -it l1jtw
+	docker run -d --rm -p 2000:2000 -it l1jtw
 
 run_debug:
 	docker run --rm -p 2000:2000 -it l1jtw /bin/bash
