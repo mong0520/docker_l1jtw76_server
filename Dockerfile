@@ -13,6 +13,8 @@ RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y vim
 RUN apt-get install -y telnet
 RUN apt-get install -y mysql-client
+#RUN apt-get install -y python && apt-get install -y python-pip
+#RUN pip install flask
 
 ADD L1J-TW_3.80c.tar.gz /opt/l1jtw/
 ADD config/* /opt/l1jtw/L1J-TW_3.80c/config/
