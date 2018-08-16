@@ -1,0 +1,54 @@
+十月 10, 2015 4:41:45 下午 l1j.server.Config load
+資訊: loading gameserver config
+十月 10, 2015 4:41:46 下午 l1j.server.server.IdFactory loadState
+資訊: 目前的物件ID: 268435456
+十月 10, 2015 4:43:22 下午 l1j.server.server.ClientThread run
+資訊: (127.0.0.1) 連結到伺服器。
+十月 10, 2015 4:43:24 下午 l1j.server.server.ClientThread run
+資訊: (null:127.0.0.1)連線終止。
+十月 10, 2015 4:43:34 下午 l1j.server.server.ClientThread run
+資訊: (127.0.0.1) 連結到伺服器。
+十月 10, 2015 4:43:36 下午 l1j.server.server.Account create
+資訊: created new account for test
+十月 10, 2015 4:44:01 下午 l1j.server.server.clientpackets.C_LoginToServer <init>
+資訊: 角色登入到伺服器中: char=殺無赦 account=test host=127.0.0.1
+十月 10, 2015 4:44:55 下午 l1j.server.server.utils.StreamUtil close
+嚴重: Connection reset by peer: socket write error
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.io.BufferedOutputStream.flush(Unknown Source)
+	at java.io.FilterOutputStream.close(Unknown Source)
+	at l1j.server.server.utils.StreamUtil.close(StreamUtil.java:30)
+	at l1j.server.server.ClientThread.run(ClientThread.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+十月 10, 2015 4:44:55 下午 l1j.server.server.ClientThread run
+資訊: (test:127.0.0.1)連線終止。
+十月 10, 2015 4:46:22 下午 l1j.server.server.ClientThread run
+資訊: (127.0.0.1) 連結到伺服器。
+十月 10, 2015 4:46:24 下午 l1j.server.server.ClientThread run
+資訊: (null:127.0.0.1)連線終止。
+十月 10, 2015 4:46:43 下午 l1j.server.server.ClientThread run
+資訊: (127.0.0.1) 連結到伺服器。
+十月 10, 2015 4:46:51 下午 l1j.server.server.utils.StreamUtil close
+嚴重: Connection reset by peer: socket write error
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.io.BufferedOutputStream.flush(Unknown Source)
+	at java.io.FilterOutputStream.close(Unknown Source)
+	at l1j.server.server.utils.StreamUtil.close(StreamUtil.java:30)
+	at l1j.server.server.ClientThread.run(ClientThread.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+十月 10, 2015 4:46:51 下午 l1j.server.server.ClientThread run
+資訊: (null:127.0.0.1)連線終止。
