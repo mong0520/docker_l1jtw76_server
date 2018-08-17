@@ -13,6 +13,7 @@ RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y vim
 RUN apt-get install -y telnet
 RUN apt-get install -y mysql-client
+RUN apt-get install -y tzdata
 #RUN apt-get install -y python && apt-get install -y python-pip
 #RUN pip install flask
 
@@ -22,6 +23,10 @@ ADD config/* /opt/l1jtw/L1J-TW_3.80c/config/
 # Setup JAVA_HOME, this is useful for docker commandline
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
+
+# Set TimeZone
+ENV TZ=Asia/Taipei
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 ARG L1JDB_HOST
 ARG L1JDB_ACCOUNT
