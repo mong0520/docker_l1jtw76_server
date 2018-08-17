@@ -10,7 +10,7 @@ run:
 	@docker run -d --rm -p 2000:2000 -p 23:23 -it l1jtw
 
 run_debug:
-	@docker run --rm -v $(PWD):/mnt -p 2000:2000 -p 80:80 -it l1jtw /bin/bash
+	@docker run --rm -v $(PWD):/mnt -p 2000:2000 -p 23:23 -it l1jtw /bin/bash
 
 release:
 	$(shell /usr/local/bin/aws ecr get-login --no-include-email --region ap-northeast-1)
