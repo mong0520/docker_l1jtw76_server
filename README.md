@@ -18,5 +18,5 @@ flush privileges;
 Note: /etc/mysql/mysql.conf.d/mysqld.cnf to #bind-address for allow docker container to access host mysql
 
 2. Build dockerfile
-> make build 
+> make build DB_ACCOUNT=your_db_account DB_PASSWORD=your_db_password
 > make run
