@@ -19,4 +19,5 @@ Note: /etc/mysql/mysql.conf.d/mysqld.cnf to #bind-address for allow docker conta
 
 2. Build dockerfile
 > make build DB_ACCOUNT=your_db_account DB_PASSWORD=your_db_password
+> 
 > make run
