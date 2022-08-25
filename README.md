@@ -1,3 +1,10 @@
+## Installation
+
+```sh
+docker-compose up -d db
+```
+
+
 * Goal:
 
 Host: MYSQL server installed
@@ -18,5 +25,5 @@ flush privileges;
 Note: /etc/mysql/mysql.conf.d/mysqld.cnf to #bind-address for allow docker container to access host mysql
 
 2. Build dockerfile
-> make build 
+> make build
 > make run

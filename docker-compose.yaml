@@ -1,0 +1,29 @@
+version: '3'
+services:
+  app:
+    build:
+        context: .
+        dockerfile: Dockerfile
+        args:
+          - L1JDB_HOST=db
+          - L1JDB_ACCOUNT=root
+          - L1JDB_PASSWORD=emanager
+    depends_on:
+     - db
+    ports:
+     - "2000:2000"
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+        MYSQL_DATABASE: 'l1jtw'
+        MYSQL_ROOT_PASSWORD: emanager
+    ports:
+        - '3306:3306'
+    expose:
+        - '3306'
+    volumes:
+      - './data/mysql:/docker-entrypoint-initdb.d/'
+      - ./db/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+      - ./db/l1jtw.sql:/docker-entrypoint-initdb.d/init.sql
