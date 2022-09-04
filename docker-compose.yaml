@@ -8,6 +8,8 @@ services:
           - L1JDB_HOST=db
           - L1JDB_ACCOUNT=root
           - L1JDB_PASSWORD=emanager
+    volumes:
+     - './config/:/opt/l1jtw/L1J-TW_3.80c/config/'
     depends_on:
      - db
     ports:
